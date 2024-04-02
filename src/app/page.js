@@ -8,6 +8,7 @@ import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import ParticlesComponent from "../components/Particles";
+import Head from "next/head";
 
 function App() {
   // eslint-disable-next-line
@@ -85,6 +86,26 @@ function App() {
   return (
     <div className="App overflow-x-hidden">
       <>
+        <Head>
+          <title>Hamza Shah</title>
+          <meta
+            name="description"
+            content="I specialize in developing custom web solutions for businesses"
+            key="desc"
+          />
+          <meta
+            property="og:title"
+            content="Hamza Shah | Developer Portfolio"
+          />
+          <meta
+            property="og:description"
+            content="I specialize in developing custom web solutions for businesses"
+          />
+          <meta
+            property="og:image"
+            content="https://i.postimg.cc/NGkQ5ZxB/profile.jpg"
+          />
+        </Head>
         <div className="absolute z-10 opacity-75">
           <ParticlesComponent />
         </div>

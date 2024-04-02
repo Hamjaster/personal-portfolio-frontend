@@ -5,7 +5,7 @@ import { ChakraWrapper, ContextWrapper } from "@/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hamza Shah",
+  title: "Hamza Shah | Developer Portfolio",
   description: "A full stack developer portfolio delivering web solutions.",
 };
 
