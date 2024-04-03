@@ -105,16 +105,12 @@ function App() {
             property="og:image"
             content="https://i.postimg.cc/NGkQ5ZxB/profile.jpg"
           />
-
           <meta property="og:url" content="hamzashah.me" />
-
           <meta
             property="twitter:card"
             content="https://scontent-ams4-1.xx.fbcdn.net/v/t39.30808-1/419803699_122118351206154625_5923252227130875075_n.jpg?stp=dst-jpg_p320x320&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=GC2szcyZft0AX_PU-bg&_nc_ht=scontent-ams4-1.xx&oh=00_AfA3mwaaIFABLHx0RnF_Hi8Yaby2SwnSH3ltb9ZFayg-xw&oe=660CBA76"
           />
-
           <meta property="twitter:url" content="hamzashah.me" />
-
           <meta
             property="twitter:title"
             content="Hamza Shah - A Developer Portfolio"
