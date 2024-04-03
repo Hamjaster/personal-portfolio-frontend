@@ -106,7 +106,7 @@ export default function LandingPage() {
           <ParticlesComponent />
         </div>
 
-        {/* Text        */}
+        {/* Text  */}
         <div className="text relative z-40  my-auto font-[Inter] flex items-center justify-center flex-col">
           <div className="head w-full sm:w-2/3 lg:w-full flex flex-wrap space-y-6 min-[310px]:space-y-0 lg:space-x-6 lg:flex-nowrap flex-row justify-start sm:justify-center items-center ml-8 sm:-ml-8 md:ml-0  h-52 font-[700] md:text-8xl">
             <span className="block md:inline text-[5rem] min-[535px]:text-8xl">
@@ -213,20 +213,6 @@ export default function LandingPage() {
             </motion.div>
           </a>
 
-          <a target="_blank" href="https://www.instagram.com/sapiendev/">
-            <motion.div
-              initial={{ y: 400, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{
-                duration: 1,
-                delay: i + 1,
-              }}
-              className="icon cursor-pointer rounded-3xl"
-            >
-              <FaInstagram />
-            </motion.div>
-          </a>
-
           <a
             target="_blank"
             href="https://www.linkedin.com/in/hamza-shah-a02505248/"
@@ -241,6 +227,20 @@ export default function LandingPage() {
               className="icon cursor-pointer rounded-xl"
             >
               <FaLinkedin />
+            </motion.div>
+          </a>
+
+          <a target="_blank" href="https://www.instagram.com/sapiendev/">
+            <motion.div
+              initial={{ y: 400, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: i + 1,
+              }}
+              className="icon cursor-pointer rounded-3xl"
+            >
+              <FaInstagram />
             </motion.div>
           </a>
 

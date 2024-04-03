@@ -5,13 +5,13 @@ import { ChakraWrapper, ContextWrapper } from "@/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL("https://abc.xyz"),
   title: "Hamza Shah | Developer Portfolio",
   description: "A full stack developer portfolio delivering web solutions.",
   openGraph: {
     title: "Hamza Shah | Developer Portfolio",
     description:
-      "I specialize in developing custom web solutions for businesses",
-    image: "https://i.postimg.cc/NGkQ5ZxB/profile.jpg",
+      "I specialize in developing custom web solutions to businesses",
   },
 };
 
