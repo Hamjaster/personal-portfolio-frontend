@@ -5,7 +5,7 @@ import { ChakraWrapper, ContextWrapper } from "@/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://abc.xyz"),
+  metadataBase: new URL("https://hamzashah.me"),
   title: "Hamza Shah | Developer Portfolio",
   description: "A full stack developer portfolio delivering web solutions.",
   openGraph: {
