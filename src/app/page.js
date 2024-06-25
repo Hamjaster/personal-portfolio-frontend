@@ -20,6 +20,20 @@ function App() {
     "bg-black-700",
     "bg-pink-700",
 
+    "sm:bg-red-700",
+    "sm:bg-purple-700",
+    "sm:bg-blue-700",
+    "sm:bg-green-700",
+    "sm:bg-black-700",
+    "sm:bg-pink-700",
+
+    "md:bg-red-700",
+    "md:bg-purple-700",
+    "md:bg-blue-700",
+    "md:bg-green-700",
+    "md:bg-black-700",
+    "md:bg-pink-700",
+
     "border-red-600",
     "border-pink-600",
     "border-purple-600",
@@ -47,6 +61,20 @@ function App() {
     "text-blue-700",
     "text-green-700",
     "text-black-700",
+
+    "sm:text-red-700",
+    "sm:text-pink-700",
+    "sm:text-purple-700",
+    "sm:text-blue-700",
+    "sm:text-green-700",
+    "sm:text-black-700",
+
+    "md:text-red-700",
+    "md:text-pink-700",
+    "md:text-purple-700",
+    "md:text-blue-700",
+    "md:text-green-700",
+    "md:text-black-700",
 
     "hover:text-red-700",
     "hover:text-pink-700",

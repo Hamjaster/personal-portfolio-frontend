@@ -18,9 +18,11 @@ import {
   BiLogoPostgresql,
 } from "react-icons/bi";
 import { TbBrandVscode, TbBrandNextjs } from "react-icons/tb";
-
+import { SiFastapi } from "react-icons/si";
 import FadeUp from "../components/FadeUp";
-
+import { TbApi } from "react-icons/tb";
+import { RiSupabaseFill } from "react-icons/ri";
+import { IoLogoFirebase } from "react-icons/io5";
 import Skill from "../components/Skill";
 
 import { MyContext } from "../context/ContextProvider";
@@ -39,18 +41,18 @@ export default function Skills() {
       <div className="skills  -z-0 items-center gap-3 gap-x-5 grid grid-cols-1 sm:grid-cols-2 justify-center flex-wrap w-10/12 md:w-2/3 lg:w-1/2 mx-auto ">
         <Skill icon={<FaReact />} text={"React"} />
         <Skill icon={<BiLogoTailwindCss />} text={"Tailwind"} />
-        <Skill icon={<FaCss3 />} text={"CSS3"} />
-
         <Skill icon={<FaNodeJs />} text={"NodeJS"} />
-
         <Skill icon={<FaGithub />} text={"Github"} />
         <Skill icon={<BiLogoMongodb />} text={"MongoDB"} />
-        <Skill icon={<BiLogoCPlusPlus />} text={"C++"} />
-        <Skill icon={<TbBrandVscode />} text={"VScode"} />
         <Skill icon={<BiLogoRedux />} text={"Redux"} />
+        <Skill icon={<IoLogoFirebase />} text={"Firebase"} />
         <Skill icon={<TbBrandNextjs />} text={"Next"} />
         <Skill icon={<BiLogoTypescript />} text={"TS"} />
         <Skill icon={<BiLogoPostgresql />} text={"SQL"} />
+        <Skill icon={<FaPython />} text={"Python"} />
+        <Skill icon={<SiFastapi />} text={"FastAPI"} />
+        <Skill icon={<RiSupabaseFill />} text={"Supabase"} />
+        <Skill icon={<TbApi />} text={"REST"} />
         {/* <Skill icon={<img src={x} />} text={'Git'} /> */}
       </div>
     </div>

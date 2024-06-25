@@ -6,7 +6,7 @@ export default function Footer() {
   const { theme } = useContext(MyContext);
   return (
     <div className="footer relative z-40 mb-12 mt-12">
-      <hr class="h-px w-11/12 mx-auto my-8 bg-gray-300 border-0 dark:bg-gray-700" />
+      <hr class="h-px w-11/12 mx-auto my-8 bg-gray-300 border-0" />
       <div
         className={`text-lg sm:text-xl text-${theme}-600 flex flex-row w-full`}
       >

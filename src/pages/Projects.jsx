@@ -51,35 +51,20 @@ export default function Projects() {
       </div>
 
       {/* Projects Section */}
-      <div className="mx-12 mt-24 flex flex-col-reverse">
+      <div className="mx-5 sm:mx-12 mt-24 flex flex-col-reverse">
         {loading ? (
           <div>Loading</div>
         ) : (
           <>
-            {/* Displaying un-featured products */}
-            {projectsArr
-              .filter((project) => {
-                return !project.featured;
-              })
-              .map((project) => {
-                return (
-                  <FadeUp delay={0.1} text={<Project project={project} />} />
-                );
-              })}
-
-            {/* Featured Produce to top */}
-            {projectsArr
-              .filter((project) => {
-                return project.featured === true;
-              })
-              .map((featured_project) => {
-                return (
-                  <FadeUp
-                    delay={0.1}
-                    text={<Project project={featured_project} />}
-                  />
-                );
-              })}
+            {/* Displaying  products */}
+            {projectsArr.map((project, i) => {
+              return (
+                <FadeUp
+                  delay={0.1}
+                  text={<Project index={i + 1} project={project} />}
+                />
+              );
+            })}
           </>
         )}
       </div>

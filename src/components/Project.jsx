@@ -2,27 +2,13 @@ import React, { useContext, useRef } from "react";
 import { MyContext } from "../context/ContextProvider";
 import { FaGithub } from "react-icons/fa";
 import { Roboto } from "next/font/google";
+import { MdOpenInNew } from "react-icons/md";
 
 const robotoHeading = Roboto({ subsets: ["latin"], weight: "700" });
 const robotoDesc = Roboto({ subsets: ["latin"], weight: "300" });
 
-export default function Project({ project }) {
+export default function Project({ project, index }) {
   const { theme } = useContext(MyContext);
-  const videoRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.style.display = "block";
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.style.display = "none";
-      videoRef.current.pause();
-    }
-  };
 
   const getEmbeddedUrl = (googleDriveUrl) => {
     // Extract the VIDEO_ID from the Google Drive URL
@@ -34,57 +20,55 @@ export default function Project({ project }) {
   return (
     <>
       <div
-        className={`relative border-2 mb-5 border-${theme}-600 md:h-72 flex md:flex-row flex-col`}
+        className={`relative my-14 md:h-72 flex md:flex-row items-center flex-col `}
       >
         {/* Project Image BG */}
-        <div
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="md:w-2/5 h-56 md:h-full relative"
-        >
-          <video
-            ref={videoRef}
-            src={project.video}
-            className="absolute top-0 left-0 w-full h-full object-cover"
-            style={{ display: "none" }}
-          ></video>
-          <div
-            style={{
-              background: `url(${project.img}) center/cover`,
-            }}
-            className="w-full h-full"
-          ></div>
+        <div className="md:w-2/5 flex items-center justify-center my-auto md:h-full relative">
+          <img src={project.img} alt="" srcset="" />
         </div>
 
         {/* Info */}
         <div
-          className={`info  md:w-3/5 mx-auto relative z-40 bg-${theme}-600 text-white font-semibold md:text-4xl text-2xl items-start justify-between flex flex-col px-4 md:py-7 py-4 space-y-3`}
+          className={`info md:w-3/5 mx-auto relative z-40 bg-${theme}-700 md:bg-transparent text-white  md:text-${theme}-700 font-semibold text-xl md:text-2xl lg:text-4xl  items-start justify-between flex flex-col  md:py-7 pt-2 px-2 rounded-lg md:rounded-none space-y-3`}
         >
-          <div className="text-start md:space-y-3 space-y-1">
+          <div className={` text-center md:text-start `}>
+            {/* Title */}
             <span className={` ${robotoHeading.className} `}>
               {project.title}
             </span>
+            {/* Description */}
             <div
-              className={` ${robotoDesc.className} font-light text-sm md:text-lg `}
+              className={` ${robotoDesc.className} p-3 md:bg-${theme}-700 text-white font-light text-sm md:text-base lg:text-lg mt-3 `}
             >
               {project.desc}
-            </div>
-          </div>
+              <div className="mt-5 text-start w-full flex flex-row  justify-between items-center ">
+                {project.link && (
+                  <a
+                    target="_"
+                    className={`text-base lg:text-lg text-center hover:underline font-extrabold`}
+                    href={project.link}
+                  >
+                    View Live{" "}
+                    <MdOpenInNew className="inline text-base lg:text-lg mx-1" />
+                  </a>
+                )}
 
-          <div className="text-start w-full flex flex-row  justify-between items-center ">
-            <a
-              target="_"
-              className={`text-lg text-center md:w-36 block w-full border hover:bg-slate-200 border-slate-50 text-${theme}-700 md:rounded-md rounded-sm bg-white md:px-4 px-2 md:py-2 py-1`}
-              href={project.link}
-            >
-              View
-            </a>
-
-            <a target="_" href={project.github}>
-              <div className="git cursor-pointer opacity-70 hover:opacity-100">
-                <FaGithub />
+                {project.github && (
+                  <a target="_" href={project.github}>
+                    <div className="git text-2xl lg:text-3xl cursor-pointer icon rounded-full">
+                      <FaGithub />
+                    </div>
+                  </a>
+                )}
               </div>
-            </a>
+            </div>
+
+            {/* Skills */}
+            <div className="skills hidden mt-3 md:flex flex-row items-center justify-evenly text-xs lg:text-base font-mono font-light">
+              {project.skills.map((s) => {
+                return <span className="">{s}</span>;
+              })}
+            </div>
           </div>
         </div>
       </div>
