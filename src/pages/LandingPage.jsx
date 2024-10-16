@@ -6,7 +6,7 @@ import AnimateChar from "../components/AnimateChar";
 import { TypeAnimation } from "react-type-animation";
 import ParticlesComponent from "../components/Particles";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-
+import { IoIosMail } from "react-icons/io";
 export default function LandingPage() {
   const hy = "Hy,";
   const I = "I am";
@@ -23,7 +23,7 @@ export default function LandingPage() {
   return (
     <>
       <div
-        className={`flex flex-col justify-evenly relative bg-${theme}-700 items-center bg-fixed text-white h-[70vh] md:h-[100vh] text-4xl `}
+        className={`flex flex-col justify-evenly relative bg-${theme}-700 items-center bg-fixed text-white h-[80vh] md:h-[100vh] text-4xl `}
       >
         {/* Color Pallette */}
         <motion.div
@@ -108,14 +108,14 @@ export default function LandingPage() {
 
         {/* Text  */}
         <div className="text relative z-40  my-auto font-[Inter] flex items-center justify-center flex-col">
-          <div className="head w-full sm:w-2/3 lg:w-full flex flex-wrap space-y-6 min-[310px]:space-y-0 lg:space-x-6 lg:flex-nowrap flex-row justify-start sm:justify-center items-center ml-8 sm:-ml-8 md:ml-0  h-52 font-[700] md:text-8xl">
-            <span className="block md:inline text-[5rem] min-[535px]:text-8xl">
+          <div className="head w-[80%] sm:w-2/3 lg:w-full flex flex-wrap space-y-6 min-[310px]:space-y-0 lg:space-x-6 lg:flex-nowrap flex-row justify-start sm:justify-center items-center ml-8 sm:-ml-8 md:ml-0 h-40 sm:h-52 font-[700] md:text-8xl">
+            <span className="block md:inline text-[4rem]  min-[535px]:text-8xl">
               <AnimateChar delay={i} text={hy} />
             </span>
-            <span className="block md:inline  text-[5rem]  min-[535px]:text-8xl">
+            <span className="block md:inline  text-[4rem] min-[535px]:text-8xl">
               <AnimateChar delay={i + 0.7} text={I} />
             </span>
-            <span className="block md:inline text-[4.3rem] min-[535px]:text-[5.2rem] mt-2 sm:mt-0 mb-5 sm:mb-0 sm:text-[5.7rem]">
+            <span className="block md:inline text-[3.5rem]  min-[535px]:text-[5.2rem] mt-2 sm:mt-0 mb-5 sm:mb-0 sm:text-[5.7rem]">
               <AnimateChar delay={i + 0.7} text={hamza} />
             </span>
 
@@ -147,7 +147,7 @@ export default function LandingPage() {
                 2400,
                 "I’m a MERN magician 🧙 ",
                 2400,
-                "I build complex web applications ",
+                "I build complex web apps ",
                 2400,
                 "I develop web solutions for businesses",
                 2400,
@@ -227,6 +227,20 @@ export default function LandingPage() {
               className="icon cursor-pointer rounded-xl"
             >
               <FaLinkedin />
+            </motion.div>
+          </a>
+
+          <a target="_blank" href="mailto:hamzashah.dev@gmail.com">
+            <motion.div
+              initial={{ y: 400, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: i + 1,
+              }}
+              className="icon cursor-pointer rounded-xl"
+            >
+              <IoIosMail />
             </motion.div>
           </a>
 
