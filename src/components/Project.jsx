@@ -20,10 +20,10 @@ export default function Project({ project, index }) {
   return (
     <>
       <div
-        className={`relative my-14 md:h-72 flex md:flex-row items-center flex-col `}
+        className={`relative my-14 md:h-72  flex md:flex-row items-center flex-col `}
       >
         {/* Project Image BG */}
-        <div className="md:w-2/5 flex items-center justify-center my-auto md:h-full relative">
+        <div className="md:w-2/5 lg:w-1/3 flex items-center justify-center my-auto md:h-full relative">
           <img src={project.img} alt="" srcset="" />
         </div>
 

@@ -27,20 +27,15 @@ export default function About() {
         <div className="text-4xl sm:text-4xl w-full md:text-5xl font-bold capitalize">
           <FadeUp delay={i} text="Let me introduce myself" />
         </div>
-        <p className="text-xl 2xl:text-3xl w-11/12 md:w-11/12 leading-relaxed font-sans">
+        <p className="text-xl 2xl:text-2xl w-11/12 md:w-11/12 leading-relaxed font-sans">
           <FadeUp
-            delay={i + 0.1}
-            text="👋 Meet the Digital Dynamo: Hamza Shah! 🚀"
+            delay={i + 0.2}
+            text="I'm a full stack developer with the passion of delivering web solutions to businesses. With strong foundations in Javascript, I specialize in building scalable webapps with relevant technologies."
           />
           <br />
           <FadeUp
             delay={i + 0.2}
-            text="Hey there, Future Collaborator! I'm the digital handyman you've been dreaming of – a Full Stack Developer with proven experience of 3+ years"
-          />
-          <br />
-          <FadeUp
-            delay={i + 0.2}
-            text="I'm Expert in Figma to HTML, CSS, Tailwind Responsive Websites, NextJS, React js Websites, Typescript, MERN Stack Websites. I've worked with several organizations to offer web solutions to them and you might be the next on the list."
+            text="I'm Expert in Figma to Responsive Apps, NextJS, React js Apps, Typescript, MERN Stack. I've worked with several organizations to offer SaaS solutions to them and you might be the next on the list."
           />
         </p>
       </div>
