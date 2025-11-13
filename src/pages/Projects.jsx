@@ -15,7 +15,7 @@ export default function Projects() {
     setLoading(true);
     try {
       const { data } = await axios.get(
-        "https://v2-portfolio-cxfebf5bs-hamjaster.vercel.app/projects"
+        "https://v2-portfolio-chi.vercel.app/projects"
       );
 
       const filteredData = data.filter((project) => {
