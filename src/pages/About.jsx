@@ -15,42 +15,76 @@ export default function About() {
   const i = 0.2;
 
   return (
-    <div
-      className={`about-page relative z-40 md:h-[750px] text-${theme}-700 flex flex-col-reverse md:flex-row items-center space-y-5 mt-36 sm:mt-52 mb-11`}
-    >
-      <div className="text pl-3 md:pl-10 pt-6 space-y-6 md:w-2/3">
-        <div
-          className={`uppercase text-xl text-${theme}-700 font-mono font-light`}
-        >
-          <FadeUp delay={i} text="about me" />
-        </div>
-        <div className="text-4xl sm:text-4xl w-full md:text-5xl font-bold capitalize">
-          <FadeUp delay={i} text="Let me introduce myself" />
-        </div>
-        <p className="text-xl 2xl:text-2xl w-11/12 md:w-11/12 leading-relaxed font-sans">
-          <FadeUp
-            delay={i + 0.2}
-            text="I'm a full stack developer with the passion of delivering web solutions to businesses. With strong foundations in Javascript, I specialize in building scalable webapps with relevant technologies."
-          />
-          <br />
-          <FadeUp
-            delay={i + 0.2}
-            text="I'm Expert in Figma to Responsive Apps, NextJS, React js Apps, Typescript, MERN Stack. I've worked with several organizations to offer SaaS solutions to them and you might be the next on the list."
-          />
-        </p>
-      </div>
-
+    <>
       <div
-        style={{
-          backgroundImage: 'url("hamza.jpg")',
-        }}
-        className="image-container bg-cover md:bg-center cursor-pointer  relative rounded-xl overflow-hidden my-auto mx-4 h-[60vh] w-11/12 md:h-5/6 md:w-1/3"
+        className={`about-page relative z-40 min-h-[750px] text-${theme}-700 flex flex-col md:flex-row items-center gap-12 mt-36 sm:mt-52 mb-11 px-3 md:px-10`}
       >
-        {/* <img src="/hamza.jpg" alt="" /> */}
-        <div
-          className={`overlay absolute inset-0 bg-${theme}-700 opacity-35 transition-opacity duration-300 ease-in-out`}
-        ></div>
+        <div className="text space-y-8 md:w-3/5">
+          <div
+            className={`uppercase text-sm tracking-wider text-${theme}-700 font-mono font-medium`}
+          >
+            <FadeUp delay={i} text="ABOUT" />
+          </div>
+          <div className="text-5xl sm:text-5xl w-full md:text-6xl font-bold leading-tight">
+            <FadeUp delay={i} text="Engineering Scalable Solutions" />
+          </div>
+          <div className="space-y-4 text-lg 2xl:text-xl leading-relaxed font-sans opacity-90">
+            <p>
+              <FadeUp
+                delay={i + 0.2}
+                text="Full-Stack Engineer specializing in building scalable web applications and SaaS solutions. I transform business requirements into robust, performant systems using modern JavaScript technologies."
+              />
+            </p>
+            <p>
+              <FadeUp
+                delay={i + 0.3}
+                text="Expert in Next.js, React, TypeScript, and the MERN stack. I deliver end-to-end solutions—from design to deployment—with a focus on performance, maintainability, and user experience."
+              />
+            </p>
+          </div>
+        </div>
+
+        <div className="md:w-2/5 w-full flex items-center justify-center">
+          <div className="relative w-full max-w-md aspect-square">
+            {/* Animated geometric design */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className={`absolute w-64 h-64 border-2 border-${theme}-700 opacity-20 rounded-lg rotate-12 animate-pulse`}
+                style={{ animationDuration: '3s' }}
+              ></div>
+              <div
+                className={`absolute w-56 h-56 border-2 border-${theme}-700 opacity-30 rounded-lg -rotate-12 animate-pulse`}
+                style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}
+              ></div>
+              <div
+                className={`absolute w-48 h-48 border-2 border-${theme}-700 opacity-40 rounded-lg rotate-45 animate-pulse`}
+                style={{ animationDuration: '2s', animationDelay: '1s' }}
+              ></div>
+            </div>
+            
+            {/* Stats or Tech Focus */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 z-10">
+              <div className="text-center">
+                <div className={`text-5xl font-bold text-${theme}-700`}>
+                  <FadeUp delay={i + 0.5} text="3.5" />
+                </div>
+                <div className={`text-xs uppercase tracking-wider text-${theme}-700 opacity-70 mt-1`}>
+                  <FadeUp delay={i + 0.6} text="Years Experience" />
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className={`text-5xl font-bold text-${theme}-700`}>
+                  <FadeUp delay={i + 0.7} text="12+" />
+                </div>
+                <div className={`text-xs uppercase tracking-wider text-${theme}-700 opacity-70 mt-1`}>
+                  <FadeUp delay={i + 0.8} text="Projects Delivered" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

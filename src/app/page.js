@@ -6,6 +6,7 @@ import LandingPage from "../pages/LandingPage";
 import About from "../pages/About";
 import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
+import Testimonials from "../pages/Testimonials";
 import Contact from "../pages/Contact";
 import ParticlesComponent from "../components/Particles";
 import Head from "next/head";
@@ -131,6 +132,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        {/* <Testimonials /> */}
         <Contact />
         <Footer />
       </>
